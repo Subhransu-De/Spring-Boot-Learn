@@ -1,6 +1,7 @@
 package com.example.SpringBootLearn.Vacancy;
 
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,12 @@ public class VacancyService {
     this.vacancyRepository = vacancyRepository;
   }
 
-  public List<Vacancy> getVacancy(){
+  public List<Vacancy> getVacancies(){
     return vacancyRepository.findAll();
   }
+
+  public Optional<Vacancy> getVacancy(String id) {
+    return vacancyRepository.findById(id);
+  }
+
 }

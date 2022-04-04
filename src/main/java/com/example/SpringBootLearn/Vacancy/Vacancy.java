@@ -25,6 +25,10 @@ public class Vacancy {
     this.vacancy_type = vacancy_type;
   }
 
+  public Vacancy(String vacancy_id) {
+    this.vacancy_id = vacancy_id;
+  }
+
   public String getVacancy_id() {
     return vacancy_id;
   }
